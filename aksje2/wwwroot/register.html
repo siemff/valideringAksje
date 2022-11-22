@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Kunderegister</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/lagre.js"></script>
+    <script src="js/validering.js"></script>
+</head>
+<body>
+    <div class="container">
+        ﻿<div class="card" style="width:50%; margin:auto; display:block;">
+            <img src="media/Logo.png" style="width:50%; margin:auto; display: block;" class="mb-2 " />
+            <h1 class="card-header" style="color:black">Register</h1>
+            <div class="card-body">
+                <form class="form">
+                    <div class="form-group">
+                        <label class="form-label" for="brukernavn">Fornavn</label>
+                        <input class="form-control" type="text" id="fornavn" onchange="validerFornavn(this.value)" />
+                        <span id="feilFornavn" style="color: red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="brukernavn">Etternav</label>
+                        <input class="form-control" type="text" id="etternavn" onchange="validerEtternavn(this.value)" />
+                        <span id="feilEtternavn" style="color: red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="brukernavn">Brukernavn</label>
+                        <input class="form-control" type="text" id="brukernavn" onchange="validerBrukernavn(this.value)" />
+                        <span id="feilBrukernavn" style="color: red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="passord">Passord</label>
+                        <input class="form-control" type="password" id="passord" onchange="validerPassord(this.value)" />
+                        <span id="feilPassord" style="color: red"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onClick="validerOgRegister()" class="btn btn-primary">Register</button>
+                        <a class="btn btn-link" href="logginn.html">Logg inn</a>
+                        <div id="feil" style="color:red"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
